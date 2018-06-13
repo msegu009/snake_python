@@ -23,7 +23,7 @@ snake = [
 ]
 
 food = [sh/2, sw/2]
-w.addch(food[0], food[1], curses.ACS_PI)
+w.addch(food[0], food[1], curses.ACS_DIAMOND)
 
 key = curses.KEY_RIGHT
 
@@ -59,7 +59,7 @@ while True:
             ]
 #resets loops            
             food = nf if nf not in snake else None
-        w.addch(food[0], food[1], curses.ACS_PI)
+        w.addch(food[0], food[1], curses.ACS_DIAMOND)
     else:
         tail = snake.pop()
         w.addch(tail[0], tail[1], ' ')
